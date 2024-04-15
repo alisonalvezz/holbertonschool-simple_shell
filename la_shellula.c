@@ -5,11 +5,13 @@ int main()
 {
 	/**char *cmd;*/
 
-	display_prompt();
-
 	while (1)
 	{
-
+		display_prompt();
+		/**tiene que ser dentro del bucle porq sino no se ejecuta siempre*/
+		/**leer comando con getline desde la stdin*/
+		/*ejecutar comando con execute_command()*/
+		/**repetir para esperar el siuiente comando del user*/
 		/**execute_command(cmd);*/
 	}
 
