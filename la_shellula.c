@@ -76,4 +76,5 @@ void execute_command(char *cmd)
 			exit(EXIT_FAILURE);
 		}
 	}
+	return (cmd)
 }
