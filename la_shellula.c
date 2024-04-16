@@ -2,26 +2,32 @@
 
 int main()
 {
-	/**char *cmd;*/
-	size_t buffer_size = 50;
-	char *buffer;
-
+	char *cmd;
+       
 	while (1)
 	{
 		display_prompt();
-		/**tiene que ser dentro del bucle porq sino no se ejecuta siempre*/
-		getline(&buffer, &buffer_size, stdin);
-		/**leer comando con getline desde la stdin*/
-		/*ejecutar comando con execute_command()*/
-		/**repetir para esperar el siuiente comando del user*/
-		/**execute_command(cmd);*/
+		cmd = read_line();
+		printf("cmd = %s\n", cmd);
 	}
-
-	return (0);
+	return (EXIT_SUCCESS);
 }
 
 void display_prompt(void)
 {
         printf("la_shellula ");
         fflush(stdout);
+}
+
+char *read_line(void)
+{
+char *cmd = NULL;
+size_t BUFSIZE = 0;
+
+ if (getline(&cmd, &BUFSIZE, stdin) == -1)
+   {
+     perror("read_line");
+     exit(EXIT_FAILURE);
+   }
+  return (cmd);
 }
