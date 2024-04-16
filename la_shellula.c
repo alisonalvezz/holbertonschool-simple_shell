@@ -1,9 +1,13 @@
 #include "simple_shell.h"
 
-int main()
+/**
+ * main - main function
+ * Return: exit success
+ */
+int main(void)
 {
 	char *cmd;
-       
+
 	while (1)
 	{
 		display_prompt();
@@ -13,26 +17,36 @@ int main()
 	return (EXIT_SUCCESS);
 }
 
+/**
+ * display_prompt - displays prompt of the function
+ */
 void display_prompt(void)
 {
-        printf("shellula ");
-        fflush(stdout);
+	printf("shellula ");
+	fflush(stdout);
 }
-  
+
+/**
+ * read_line - reads the line in the input
+ * Return: the command
+ */
 char *read_line(void)
 {
-char *cmd = NULL;
-size_t BUFSIZE = 0;
+	char *cmd = NULL;
+	size_t BUFSIZE = 0;
 
- if (getline(&cmd, &BUFSIZE, stdin) == -1)
-   {
-     perror("read_line");
-     exit(EXIT_FAILURE);
-   }
-  return (cmd);
-
+	if (getline(&cmd, &BUFSIZE, stdin) == -1)
+	{
+		perror("read_line");
+		exit(EXIT_FAILURE);
+	}
+	return (cmd);
 }
 
+/**
+ * execute_command - executes the command that the input gives us
+ * @cmd: command
+ */
 void execute_command(char *cmd)
 {
 	pid_t pid;
