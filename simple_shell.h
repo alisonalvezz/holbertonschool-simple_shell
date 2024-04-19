@@ -7,8 +7,10 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <unistd.h>
+
 void display_prompt(void);
 void execute_command(char *cmd);
 char *read_line();
+int main(void);
 
 #endif
