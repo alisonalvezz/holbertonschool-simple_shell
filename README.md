@@ -33,8 +33,38 @@ A shell is a **command line** interpreter that allows users to interact with the
 ### Function Main:
 Here's the flowchart of our function main and of the shell:
 ![Main function flowchart](https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/29fd0653-d85b-4557-bc1e-f5f5ee45206b)
-- This function serves as the entry point of the program. It runs an infinity loop that repeatedly displays the prompt ("shellula$") using the function **display_prompt**, reads a command line using **read_line**, executes the command using **execute_command** and frees the memory allocated for the command line.
+#### This function serves as the entry point of the program.
+- It runs an infinity loop that repeatedly displays the prompt ("shellula$") using the function **display_prompt**, reads a command line using **read_line**, executes the command using **execute_command** and frees the memory allocated for the command line.
 This loop continues indefinitely until the user explicity exits the shell by entering the command exit.
 
 ### Function display_prompt:
 Here's the flowchart of the function display_prompt:
+![display prompt flowchart](https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/275d6710-617f-4793-ac68-ba59c6aa1282)
+#### This function displays the shell prompt to the user.
+- Prints the prompt "shellula$" to the standard output and ensures (with fflush) that the prompt is immediately displayed by flushing the output buffer.
+
+### Function read_line:
+Here's the flowchart of the function read_line:
+![Read line flowchart](https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/7174cdfc-ef00-4ae2-a896-d9556ee6789a)
+#### This function reads the input of the user.
+- Reads the input line from standard input. Checks if the line of the input is read successfully (if not succesfull, it handles the error), checks if "exit" is entered (if so, it frees the memory used and exits the program), if the line is read successfully and "exit" was not entered, the function returns the input line for further use.
+
+### Function execute_command:
+Here's the flowchart of the function execute_command:
+![execute command flowchart](https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/76143ef7-8762-4113-ae21-20e92b980a2c)
+#### This function executes a command entered by the user.
+- Uses recursion with functions **analize_arguments** to parse the command string into arguments and **search** to execute the command by searching for its path and executing it. Lastly it frees the memory allocated for the arguments array, to use it every time that the user inputs a command.
+
+### Function analize_arguments:
+Here's the flowchart of the function analize_arguments:
+![analize arguments flowchart](https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/88935676-049a-41b2-a830-3678bd5cab48)
+#### This function tokenizes the command string.
+- It begins initializing necessary variables, including 'i' for interation and a pointer 'token' for tokenization.
+- It allocates memory using malloc, if the memory allocation fails it prints an error message.
+- Uses strtok to tokenize the input command 'cmd' using spaces, tabs and newline characters as delimiters. The first call to strtok tokenizes the command and initializes the token variable with the first token (argv[0]).
+- It enters a loop that continues as long as token isn't null. Inside the loop it checks if 'i' is less than argv_size -1 (to ensure that there is space in the argv array to store another token), and if theres space, it assigns the current token to argv[i] and increments i. Then, it tokenizes the input again to get the next token.
+- After the loop, it sets argv[i] to null, to ensure that argv array is properly terminated.
+  #### It returns the argv array containing the parsed arguments.
+
+### Function search:
+Here's the flowchart of the function search:
