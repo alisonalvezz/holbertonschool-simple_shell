@@ -1,5 +1,5 @@
 # Simple shell
-<img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet.project.files/holbertonschool-low_level_programming/235/shell.jpeg" alt="the gates of shell" width="200"/>
+<img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet.project.files/holbertonschool-low_level_programming/235/shell.jpeg" alt="the gates of shell" width="500"/>
 ^“The Gates of Shell”, by Spencer Cheng, featuring Julien Barbier
 
 In this project we are expected to make a simple shell.
@@ -32,7 +32,7 @@ A shell is a **command line** interpreter that allows users to interact with the
 ## About our shell:
 ### Function Main:
 Here's the flowchart of our function main and of the shell:
-<img src="https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/29fd0653-d85b-4557-bc1e-f5f5ee45206b" alt="main function flowchart" width="200"/>
+<img src="https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/29fd0653-d85b-4557-bc1e-f5f5ee45206b" alt="main function flowchart" width="600"/>
 #### This function serves as the entry point of the program.
 - It runs an infinity loop that repeatedly displays the prompt ("shellula$") using the function **display_prompt**, reads a command line using **read_line**, executes the command using **execute_command** and frees the memory allocated for the command line.
 This loop continues indefinitely until the user explicity exits the shell by entering the command exit.
