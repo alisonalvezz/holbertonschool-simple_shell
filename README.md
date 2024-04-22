@@ -30,33 +30,33 @@ A shell is a **command line** interpreter that allows users to interact with the
 - What is EOF / “end-of-file”?
 
 ## About our shell:
-### Function Main:
+### Function [Main](https://github.com/alisonalvezz/holbertonschool-simple_shell/blob/main/la_shellula.c):
 Here's the flowchart of our function main and of the shell:
-<img src="https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/29fd0653-d85b-4557-bc1e-f5f5ee45206b" alt="main function flowchart" width="500"/>
+<img src="https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/29fd0653-d85b-4557-bc1e-f5f5ee45206b" alt="main function flowchart" width="425"/>
 #### This function serves as the entry point of the program.
 - It runs an infinity loop that repeatedly displays the prompt ("shellula$") using the function **display_prompt**, reads a command line using **read_line**, executes the command using **execute_command** and frees the memory allocated for the command line.
 This loop continues indefinitely until the user explicity exits the shell by entering the command exit.
 
-### Function display_prompt:
+### Function [display_prompt](https://github.com/alisonalvezz/holbertonschool-simple_shell/blob/main/display_prompt.c):
 Here's the flowchart of the function display_prompt:
 <img src="https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/275d6710-617f-4793-ac68-ba59c6aa1282" alt="display prompt flowchart" width="400"/>
 #### This function displays the shell prompt to the user.
 - Prints the prompt "shellula$" to the standard output and ensures (with fflush) that the prompt is immediately displayed by flushing the output buffer.
 
-### Function read_line:
-Here's the flowchart of the function read_line:
+### Function [read_line](https://github.com/alisonalvezz/holbertonschool-simple_shell/blob/main/read_line.c):
+- Here's the flowchart of the function read_line:
 <img src="https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/7174cdfc-ef00-4ae2-a896-d9556ee6789a" alt="read line flowchart" width="500"/>
 #### This function reads the input of the user.
 - Reads the input line from standard input. Checks if the line of the input is read successfully (if not succesfull, it handles the error), checks if "exit" is entered (if so, it frees the memory used and exits the program), if the line is read successfully and "exit" was not entered, the function returns the input line for further use.
 
-### Function execute_command:
-Here's the flowchart of the function execute_command:
+### Function [execute_command](https://github.com/alisonalvezz/holbertonschool-simple_shell/blob/main/execute_command.c):
+- Here's the flowchart of the function execute_command:
 <img src="https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/7174cdfc-ef00-4ae2-a896-d9556ee6789a" alt="execute command flowchart" width="500"/>
 #### This function executes a command entered by the user.
 - Uses recursion with functions **analize_arguments** to parse the command string into arguments and **search** to execute the command by searching for its path and executing it. Lastly it frees the memory allocated for the arguments array, to use it every time that the user inputs a command.
 
-### Function analize_arguments:
-Here's the flowchart of the function analize_arguments:
+### Function [analize_arguments](https://github.com/alisonalvezz/holbertonschool-simple_shell/blob/main/analize_arguments.c):
+- Here's the flowchart of the function analize_arguments:
 <img src="https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/88935676-049a-41b2-a830-3678bd5cab48" alt="analize arguments flowchart" width="400"/>
 #### This function tokenizes the command string.
 - It begins initializing necessary variables, including 'i' for interation and a pointer 'token' for tokenization.
@@ -66,5 +66,9 @@ Here's the flowchart of the function analize_arguments:
 - After the loop, it sets argv[i] to null, to ensure that argv array is properly terminated.
   #### It returns the argv array containing the parsed arguments.
 
-### Function search:
-Here's the flowchart of the function search:
+### Function [search](https://github.com/alisonalvezz/holbertonschool-simple_shell/blob/main/search.c):
+- Here's the flowchart of the function search:
+<img src="https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/8cdcfc4c-77e5-4af5-902e-e09356090334" alt="search flowchart" width="425"/>
+#### This function searches the path of the command.
+- It begins initializing neccesary variables, and checking if theres arguments to search for.
+- If the arguments contains an absolute path, it calls 
