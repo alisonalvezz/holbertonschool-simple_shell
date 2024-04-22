@@ -6,18 +6,18 @@
  */
 char *read_line(void)
 {
-        char *cmd = NULL;
-        size_t BUFSIZE = 0;
+	char *cmd = NULL;
+	size_t BUFSIZE = 0;
 
-        if (getline(&cmd, &BUFSIZE, stdin) == -1)
-        {
-                perror("read_line");
-                exit(EXIT_FAILURE);
-        }
-        if (strcmp(cmd, "exit\n") == 0)
-                  {
-                    free(cmd);
-                    exit(EXIT_SUCCESS);
-                  }
-        return (cmd);
+	if (getline(&cmd, &BUFSIZE, stdin) == -1)
+	{
+		perror("read_line");
+		exit(EXIT_FAILURE);
+	}
+	if (strcmp(cmd, "exit\n") == 0)
+	{
+		free(cmd);
+		exit(EXIT_SUCCESS);
+	}
+	return (cmd);
 }

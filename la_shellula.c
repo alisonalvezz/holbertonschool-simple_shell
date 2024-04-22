@@ -12,7 +12,7 @@ int main(void)
 		display_prompt();
 		cmd = read_line();
 		execute_command(cmd);
-		free(cmd);	        
+		free(cmd);
 	}
 	return (EXIT_SUCCESS);
 }

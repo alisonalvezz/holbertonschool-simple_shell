@@ -5,6 +5,6 @@
  */
 void display_prompt(void)
 {
-        printf("shellula$ ");
-        fflush(stdout);
+	printf("shellula$ ");
+	fflush(stdout);
 }
