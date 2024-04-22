@@ -2,7 +2,7 @@
 <img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet.project.files/holbertonschool-low_level_programming/235/shell.jpeg" alt="the gates of shell" width="500"/>
 ^“The Gates of Shell”, by Spencer Cheng, featuring Julien Barbier
 
-In this project we are expected to make a simple shell.
+### In this project we are expected to make a simple shell.
 
 ## What is a "Shell"?
 A shell is a **command line** interpreter that allows users to interact with the operating system by typing commands. When a user enters a command, the shell interprets it, searches through the PATH variable to find the corresponding executable file in the system's directories, and executes the command by creating a new process.
@@ -39,25 +39,25 @@ This loop continues indefinitely until the user explicity exits the shell by ent
 
 ### Function display_prompt:
 Here's the flowchart of the function display_prompt:
-![display prompt flowchart](https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/275d6710-617f-4793-ac68-ba59c6aa1282)
+<img src="https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/275d6710-617f-4793-ac68-ba59c6aa1282" alt="display prompt flowchart" width="600"/>
 #### This function displays the shell prompt to the user.
 - Prints the prompt "shellula$" to the standard output and ensures (with fflush) that the prompt is immediately displayed by flushing the output buffer.
 
 ### Function read_line:
 Here's the flowchart of the function read_line:
-![Read line flowchart](https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/7174cdfc-ef00-4ae2-a896-d9556ee6789a)
+<img src="https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/7174cdfc-ef00-4ae2-a896-d9556ee6789a" alt="read line flowchart" width="600"/>
 #### This function reads the input of the user.
 - Reads the input line from standard input. Checks if the line of the input is read successfully (if not succesfull, it handles the error), checks if "exit" is entered (if so, it frees the memory used and exits the program), if the line is read successfully and "exit" was not entered, the function returns the input line for further use.
 
 ### Function execute_command:
 Here's the flowchart of the function execute_command:
-![execute command flowchart](https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/76143ef7-8762-4113-ae21-20e92b980a2c)
+<img src="https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/7174cdfc-ef00-4ae2-a896-d9556ee6789a" alt="execute command flowchart" width="600"/>
 #### This function executes a command entered by the user.
 - Uses recursion with functions **analize_arguments** to parse the command string into arguments and **search** to execute the command by searching for its path and executing it. Lastly it frees the memory allocated for the arguments array, to use it every time that the user inputs a command.
 
 ### Function analize_arguments:
 Here's the flowchart of the function analize_arguments:
-![analize arguments flowchart](https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/88935676-049a-41b2-a830-3678bd5cab48)
+<img src="https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/88935676-049a-41b2-a830-3678bd5cab48" alt="analize arguments flowchart" width="600"/>
 #### This function tokenizes the command string.
 - It begins initializing necessary variables, including 'i' for interation and a pointer 'token' for tokenization.
 - It allocates memory using malloc, if the memory allocation fails it prints an error message.
