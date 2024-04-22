@@ -31,14 +31,14 @@ A shell is a **command line** interpreter that allows users to interact with the
 
 ## About our shell:
 ### Function [Main](https://github.com/alisonalvezz/holbertonschool-simple_shell/blob/main/la_shellula.c):
-Here's the flowchart of our function main and of the shell:
+- Here's the flowchart of our function main and of the shell:
 <img src="https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/29fd0653-d85b-4557-bc1e-f5f5ee45206b" alt="main function flowchart" width="425"/>
 #### This function serves as the entry point of the program.
 - It runs an infinity loop that repeatedly displays the prompt ("shellula$") using the function **display_prompt**, reads a command line using **read_line**, executes the command using **execute_command** and frees the memory allocated for the command line.
 This loop continues indefinitely until the user explicity exits the shell by entering the command exit.
 
 ### Function [display_prompt](https://github.com/alisonalvezz/holbertonschool-simple_shell/blob/main/display_prompt.c):
-Here's the flowchart of the function display_prompt:
+- Here's the flowchart of the function display_prompt:
 <img src="https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/275d6710-617f-4793-ac68-ba59c6aa1282" alt="display prompt flowchart" width="400"/>
 #### This function displays the shell prompt to the user.
 - Prints the prompt "shellula$" to the standard output and ensures (with fflush) that the prompt is immediately displayed by flushing the output buffer.
