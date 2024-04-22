@@ -33,7 +33,7 @@ void search(char *argv[])
 				path_token = strtok(NULL, ":");
 			}
 			free(path_copy);
-			fprintf(stderr, "Missing cmd: %s\n", argv[0]);
+			fprintf(stderr, "Command not found:  %s\n", argv[0]);
 		}
 	}
 }
