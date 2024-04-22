@@ -39,7 +39,7 @@ This loop continues indefinitely until the user explicity exits the shell by ent
 
 ### Function display_prompt:
 Here's the flowchart of the function display_prompt:
-<img src="https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/275d6710-617f-4793-ac68-ba59c6aa1282" alt="display prompt flowchart" width="500"/>
+<img src="https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/275d6710-617f-4793-ac68-ba59c6aa1282" alt="display prompt flowchart" width="400"/>
 #### This function displays the shell prompt to the user.
 - Prints the prompt "shellula$" to the standard output and ensures (with fflush) that the prompt is immediately displayed by flushing the output buffer.
 
@@ -57,7 +57,7 @@ Here's the flowchart of the function execute_command:
 
 ### Function analize_arguments:
 Here's the flowchart of the function analize_arguments:
-<img src="https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/88935676-049a-41b2-a830-3678bd5cab48" alt="analize arguments flowchart" width="500"/>
+<img src="https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/88935676-049a-41b2-a830-3678bd5cab48" alt="analize arguments flowchart" width="400"/>
 #### This function tokenizes the command string.
 - It begins initializing necessary variables, including 'i' for interation and a pointer 'token' for tokenization.
 - It allocates memory using malloc, if the memory allocation fails it prints an error message.
