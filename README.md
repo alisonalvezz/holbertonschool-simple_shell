@@ -30,12 +30,25 @@ A shell is a **command line** interpreter that allows users to interact with the
 - What is EOF / “end-of-file”?
 
 ## About our shell:
+
+#### Our shell looks like this in interactive mode:
+´´´
+$ ./hsh
+(shellula$) /bin/ls
+hsh main.c shell.c
+(shellula$) ls
+hsh main.c shell.c
+($) exit
+$
+´´´
+
+
 ### Function [Main](https://github.com/alisonalvezz/holbertonschool-simple_shell/blob/main/la_shellula.c):
-- Here's the flowchart of our function main and of the shell:
-<img src="https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/29fd0653-d85b-4557-bc1e-f5f5ee45206b" alt="main function flowchart" width="425"/>
+- Here's the flowchart of our function `main` and of the shell:
+![Main Function Flowchart](https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/29fd0653-d85b-4557-bc1e-f5f5ee45206b)
 #### This function serves as the entry point of the program.
-- It runs an infinity loop that repeatedly displays the prompt ("shellula$") using the function **display_prompt**, reads a command line using **read_line**, executes the command using **execute_command** and frees the memory allocated for the command line.
-This loop continues indefinitely until the user explicity exits the shell by entering the command exit.
+- It runs an infinite loop that repeatedly displays the prompt ("shellula$") using the function **display_prompt**, reads a command line using **read_line**, executes the command using **execute_command**, and frees the memory allocated for the command line.
+- This loop continues indefinitely until the user explicitly exits the shell by entering the command "exit".
 
 ### Function [display_prompt](https://github.com/alisonalvezz/holbertonschool-simple_shell/blob/main/display_prompt.c):
 - Here's the flowchart of the function `display_prompt`:
