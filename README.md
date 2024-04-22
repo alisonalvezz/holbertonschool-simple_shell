@@ -29,3 +29,12 @@ A shell is a **command line** interpreter that allows users to interact with the
 - How to suspend the execution of a process until one of its children terminates
 - What is EOF / “end-of-file”?
 
+## About our shell:
+### Function Main:
+Here's the flowchart of our function main and of the shell:
+![Main function flowchart](https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/29fd0653-d85b-4557-bc1e-f5f5ee45206b)
+This function serves as the entry point of the program. It runs an infinity loop that repeatedly displays the prompt ("shellula$") using the function ´´´display_prompt´´´, reads a command line using ´´´read_line´´´, executes the command using ´´´execute_command´´´ and frees the memory allocated for the command line.
+This loop continues indefinitely until the user explicity exits the shell by entering the command exit.
+
+### Function display_prompt:
+Here's the flowchart of the function display_prompt:
