@@ -63,7 +63,7 @@ $
 
 ### Function [execute_command](https://github.com/alisonalvezz/holbertonschool-simple_shell/blob/main/execute_command.c):
 - Here's the flowchart of the function `execute_command`:
-![Execute Command Flowchart](https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/7174cdfc-ef00-4ae2-a896-d9556ee6789a)
+- ![Execute command flowchart](https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/ecb9bf98-7fd2-40b3-bc71-30ae8ba8cbd0)
 #### This function executes a command entered by the user.
 - Uses recursion with functions `analize_arguments` to parse the command string into arguments and `search` to execute the command by searching for its path and executing it. Lastly, it frees the memory allocated for the arguments array, to use it every time that the user inputs a command.
 
