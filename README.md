@@ -51,7 +51,7 @@ $
 
 ### Function [display_prompt](https://github.com/alisonalvezz/holbertonschool-simple_shell/blob/main/display_prompt.c):
 - Here's the flowchart of the function `display_prompt`:
-![Display Prompt Flowchart](https://github.com/alisonalvezz/holbertonschool-simple_shell/blob/main/assets/159053351/275d6710-617f-4793-ac68-ba59c6aa1282)
+![Display Prompt Flowchart](https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/275d6710-617f-4793-ac68-ba59c6aa1282)
 #### This function displays the shell prompt to the user.
 - Prints the prompt "shellula$" to the standard output and ensures (with `fflush`) that the prompt is immediately displayed by flushing the output buffer.
 
@@ -88,3 +88,16 @@ $
 
 ### Funcion [pid](https://github.com/alisonalvezz/holbertonschool-simple_shell/blob/main/pid.c):
 - Here's the flowchart of the function `pid`:
+![Pid function flowchart](https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/5ee36e8d-1439-452a-9a7d-bb969307939b)
+#### This function is designed to execute a command passed as an argument (`cmd`) along with its arguments (`argv[]`) in a child process.
+- The function starts by calling fork() system call to create a new child process.
+- If fork fails, it prints an error message and exits the program, if it succeeds, it continues to execute code in both the parent and the child processes.
+- In the child process, it uses `execve` to execute the specified command with any required arguments. If `execve` fails, it prints an error message and exits the child process.
+- In the parent process, it waits for the child process to finish execution using `waitpid`. If `waitpid` fails, it prints an error message and exits the program.
+- Once the child process completes its execution, both the parent and child processes exit. If the child process encounters an error during execution, it exits with a failure status.
+
+## Compilation
+This shell should be compilated with:
+```
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+```
