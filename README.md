@@ -1,4 +1,4 @@
-# Simple shell
+# Simple shell: Shellula 🦠
 <img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet.project.files/holbertonschool-low_level_programming/235/shell.jpeg" alt="the gates of shell" width="500"/>
 ^“The Gates of Shell”, by Spencer Cheng, featuring Julien Barbier
 
