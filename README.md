@@ -88,7 +88,7 @@ $
 
 ### Funcion [mitosis](https://github.com/alisonalvezz/holbertonschool-simple_shell/blob/main/pid.c):
 - Here's the flowchart of the function `mitosis`:
-![Pid function flowchart](https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/5ee36e8d-1439-452a-9a7d-bb969307939b)
+![Pid function flowchart](https://github.com/alisonalvezz/holbertonschool-simple_shell/blob/main/mitosis.c)
 #### This function is designed to execute a command passed as an argument (`cmd`) along with its arguments (`argv[]`) in a child process.
 - The function starts by calling fork() system call to create a new child process.
 - If fork fails, it prints an error message and exits the program, if it succeeds, it continues to execute code in both the parent and the child processes.
