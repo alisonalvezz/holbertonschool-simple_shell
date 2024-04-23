@@ -6,7 +6,7 @@
  * @argv: argv
  */
 
-void pid_function(char *cmd, char *argv[])
+void mitosis(char *cmd, char *argv[])
 {
 	pid_t pid;
 	int pidnumber;

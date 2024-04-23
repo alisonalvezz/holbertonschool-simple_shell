@@ -12,7 +12,7 @@ void display_prompt(void);
 void execute_command(char *cmd);
 char *read_line();
 void search(char *argv[]);
-void pid_function(char *cmd, char *argv[]);
+void mitosis(char *cmd, char *argv[]);
 int main(void);
 char **analize_arguments(char *cmd);
 

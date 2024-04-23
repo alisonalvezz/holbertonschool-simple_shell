@@ -17,7 +17,7 @@ void search(char *argv[])
 	{
 		if (strchr(argv[0], '/') != NULL)
 		{
-			pid_function(argv[0], argv);
+			mitosis(argv[0], argv);
 		}
 		else
 		{
@@ -26,7 +26,7 @@ void search(char *argv[])
 				sprintf(path_buffer, "%s/%s", path_token, argv[0]);
 				if (access(path_buffer, X_OK) != -1)
 				{
-					pid_function(path_buffer, argv);
+					mitosis(path_buffer, argv);
 					free(path_copy);
 					return;
 				}
