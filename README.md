@@ -86,8 +86,8 @@ $
 - If the arguments contain an absolute path, it calls `pid_function`. If the argument doesn't contain an absolute path, it starts searching through the directories specified in the PATH environment variable.
 - It constructs the full path (for example /bin/cmd or /usr/bin/cmd) and checks if it's executable in each directory, if the command is found and executable it calls `pid function` and returns from the function. If the command is not found in any directory specified in the PATH varibable, it prints an error message.
 
-### Funcion [pid](https://github.com/alisonalvezz/holbertonschool-simple_shell/blob/main/pid.c):
-- Here's the flowchart of the function `pid`:
+### Funcion [mitosis](https://github.com/alisonalvezz/holbertonschool-simple_shell/blob/main/pid.c):
+- Here's the flowchart of the function `mitosis`:
 ![Pid function flowchart](https://github.com/alisonalvezz/holbertonschool-simple_shell/assets/159053351/5ee36e8d-1439-452a-9a7d-bb969307939b)
 #### This function is designed to execute a command passed as an argument (`cmd`) along with its arguments (`argv[]`) in a child process.
 - The function starts by calling fork() system call to create a new child process.
