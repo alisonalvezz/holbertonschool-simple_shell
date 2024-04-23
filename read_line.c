@@ -12,6 +12,7 @@ char *read_line(void)
 	if (getline(&cmd, &BUFSIZE, stdin) == -1)
 	{
 		perror("read_line");
+		free(cmd);
 		exit(EXIT_FAILURE);
 	}
 	if (strcmp(cmd, "exit\n") == 0)
