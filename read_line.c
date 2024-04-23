@@ -15,6 +15,10 @@ char *read_line(void)
 		free(cmd);
 		exit(EXIT_FAILURE);
 	}
+	if (strcmp(cmd, "env\n") == 0)
+	{
+		print_env();
+	}
 	if (strcmp(cmd, "exit\n") == 0)
 	{
 		free(cmd);
