@@ -15,5 +15,6 @@ void search(char *argv[]);
 void mitosis(char *cmd, char *argv[]);
 int main(void);
 char **analize_arguments(char *cmd);
+void print_env(void);
 
 #endif
