@@ -20,6 +20,10 @@ char *_getenv(const char *name)
 		token = strtok(tokendup, "=");
 		if (token != NULL && strcmp(token, name) == 0)
 		{
+		  if (return_path)
+		    {
+		      free(return_path);
+		    }
 		  return_path = strdup(strtok(NULL, "="));
 		  free(tokendup);
 		  return (return_path);
