@@ -24,8 +24,8 @@ char *_getenv(const char *name)
 		  free(tokendup);
 		  return (return_path);
 		}
-		i++;
 		free(tokendup);
+		i++;
 	}
   return (NULL);
 }
