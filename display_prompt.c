@@ -5,6 +5,13 @@
  */
 void display_prompt(void)
 {
-	printf("shellula$ ");
-	fflush(stdout);
+	if (isatty(STDIN_FILENO) == 1)
+	{
+		printf("shellula$ ");
+		fflush(stdout);
+	}
+	else
+	{
+		return;
+	}
 }
