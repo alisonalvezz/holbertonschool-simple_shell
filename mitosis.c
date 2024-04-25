@@ -1,7 +1,7 @@
 #include "simple_shell.h"
 
 /**
- * pid_function - does pid
+ * mitosis - does pid
  * @cmd: command
  * @argv: argv
  */
