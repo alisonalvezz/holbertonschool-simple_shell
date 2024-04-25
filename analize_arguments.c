@@ -17,6 +17,7 @@ char **analize_arguments(char *cmd)
 	{
 		perror("malloc_error");
 		exit(EXIT_FAILURE);
+		free(argv);
 	}
 
 	for (i = 0; token != NULL && i < ARGV_SIZE - 1; i++)

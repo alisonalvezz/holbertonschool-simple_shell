@@ -15,5 +15,6 @@ int main(void)
 		free(cmd);
 	}
 	return (EXIT_SUCCESS);
+	free(cmd);
 }
 
