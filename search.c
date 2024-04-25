@@ -8,7 +8,7 @@
 
 void search(char *argv[])
 {
-	char *path = getenv("PATH");
+	char *path = _getenv("PATH");
 	char path_buffer[PATH_SIZE];
 	char *path_copy = strdup(path);
 	char *path_token = strtok(path_copy, ":");

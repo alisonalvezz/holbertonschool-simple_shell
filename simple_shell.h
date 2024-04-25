@@ -7,7 +7,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <unistd.h>
-
+extern char **environ;
 void display_prompt(void);
 void execute_command(char *cmd);
 char *read_line();
@@ -15,6 +15,6 @@ void search(char *argv[]);
 void mitosis(char *cmd, char *argv[]);
 int main(void);
 char **analize_arguments(char *cmd);
-void print_env(void);
+char *_getenv(const char *name);
 
 #endif
