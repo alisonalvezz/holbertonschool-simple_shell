@@ -16,14 +16,13 @@ void search(char *argv[])
 	if (path == NULL)
 	{
 		fprintf(stderr, "Failed to get PATH.\n");
-		free(path);
 		return;
 	}
 
 	if (path_copy == NULL)
 	{
+		free(path);
 		fprintf(stderr, "Failed to duplicate PATH.\n");
-		free(path_copy);
 		return;
 	}
 	if (argv[0] != NULL)
