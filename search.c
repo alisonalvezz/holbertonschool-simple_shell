@@ -13,6 +13,18 @@ void search(char *argv[])
 	char *path_copy = strdup(path);
 	char *path_token = strtok(path_copy, ":");
 
+	if (path == NULL)
+	{
+		fprintf(stderr, "Failed to get PATH.\n");
+		return;
+	}
+
+	if (path_copy == NULL)
+	{
+		free(path);
+		fprintf(stderr, "Failed to duplicate PATH.\n");
+		return;
+	}
 	if (argv[0] != NULL)
 	{
 		if (strchr(argv[0], '/') != NULL)
@@ -27,13 +39,14 @@ void search(char *argv[])
 				if (access(path_buffer, X_OK) != -1)
 				{
 					mitosis(path_buffer, argv);
-					free(path_copy);
-					return;
+					break;
 				}
 				path_token = strtok(NULL, ":");
 			}
-			free(path_copy);
-			fprintf(stderr, "Command not found:  %s\n", argv[0]);
+			if (path_token == NULL)
+				fprintf(stderr, "Command not found:  %s\n", argv[0]);
 		}
 	}
+	free(path_copy);
+	free(path);
 }
