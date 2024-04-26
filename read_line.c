@@ -14,10 +14,10 @@ char *read_line(void)
 		free(cmd);
 		exit(EXIT_SUCCESS);
 	}
-	if (strcmp(cmd, "exit\n") == 0)
-	{
-		free(cmd);
-		exit(0);
-	}
 	return (cmd);
+}
+
+int exit_command(const char *cmd)
+{
+	return (strcmp(cmd, "exit\n") == 0);
 }

@@ -16,5 +16,5 @@ void mitosis(char *cmd, char *argv[]);
 int main(void);
 char **analize_arguments(char *cmd);
 char *_getenv(const char *name);
-
+int exit_command(const char *cmd);
 #endif

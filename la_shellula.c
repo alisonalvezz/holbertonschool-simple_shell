@@ -11,6 +11,11 @@ int main(void)
 	{
 		display_prompt();
 		cmd = read_line();
+		if (exit_command(cmd))
+		{
+			free(cmd);
+			break;
+		}
 		execute_command(cmd);
 		free(cmd);
 	}
