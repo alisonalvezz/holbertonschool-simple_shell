@@ -17,7 +17,7 @@ char *read_line(void)
 	if (strcmp(cmd, "exit\n") == 0)
 	{
 		free(cmd);
-		exit(EXIT_SUCCESS);
+		exit(0);
 	}
 	return (cmd);
 }

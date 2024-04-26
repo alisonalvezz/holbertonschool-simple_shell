@@ -8,7 +8,6 @@
 
 void mitosis(char *cmd, char *argv[])
 {
-	char **env = environ;
 	pid_t pid;
 	int pidnumber;
 
@@ -20,7 +19,7 @@ void mitosis(char *cmd, char *argv[])
 	}
 	if (pid == 0)
 	{
-		if (execve(cmd, argv, env) == -1)
+		if (execve(cmd, argv, NULL) == -1)
 		{
 			perror("execve_error");
 			exit(EXIT_FAILURE);
